@@ -1,0 +1,4 @@
+{
+  "extName": { "message": "LoLdle Daily Answer" },
+  "extDesc": { "message": "Reads today's LoLdle answer from the page and shows it to you." }
+}
