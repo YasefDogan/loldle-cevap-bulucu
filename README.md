@@ -1,3 +1,5 @@
+![LoLdle Answer Finder](docs/banner.svg)
+
 # LoLdle Answer Finder
 
 **English** | [Türkçe](README.tr.md)
@@ -12,6 +14,14 @@ A small Chrome extension that reads today's [LoLdle](https://loldle.net) answer 
 - Floating on-page box, hidden by default — click it to reveal or hide the answer (no accidental spoilers)
 - Popup from the toolbar icon for a quick look
 - **Automatic language:** the interface is in Turkish if your system/browser language is Turkish, otherwise English
+
+## Screenshots
+
+| Hidden by default | Click to reveal |
+| --- | --- |
+| ![Hidden](docs/hidden.jpg) | ![Revealed](docs/revealed.jpg) |
+
+The box in the top-right corner stays hidden until you click it, so you don't get spoiled by accident.
 
 ## Installation
 

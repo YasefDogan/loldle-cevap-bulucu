@@ -1,3 +1,5 @@
+![LoLdle Cevap Bulucu](docs/banner.svg)
+
 # LoLdle Cevap Bulucu
 
 [English](README.md) | **Türkçe**
@@ -12,6 +14,14 @@
 - Sayfada yüzen kutu varsayılan olarak gizlidir — tıklayınca cevap açılır/kapanır (yanlışlıkla spoiler yemezsin)
 - Araç çubuğundaki simgeden hızlı bakış için açılır pencere
 - **Otomatik dil:** sistem/tarayıcı dilin Türkçe ise arayüz Türkçe, değilse İngilizce olur
+
+## Ekran görüntüleri
+
+| Varsayılan olarak gizli | Tıklayınca açılır |
+| --- | --- |
+| ![Gizli](docs/hidden.jpg) | ![Açık](docs/revealed.jpg) |
+
+Sağ üstteki kutu sen tıklayana kadar kapalı kalır, yanlışlıkla spoiler yemezsin.
 
 ## Kurulum
 
