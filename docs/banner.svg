@@ -19,6 +19,6 @@
     <circle r="10" fill="#0a1428"/>
     <circle cx="7" cy="-7" r="4" fill="#f0e6d2"/>
   </g>
-  <text x="230" y="105" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="bold" fill="url(#gold)">LoLdle Answer Finder</text>
+  <text x="230" y="105" font-family="Georgia, 'Times New Roman', serif" font-size="50" font-weight="bold" fill="url(#gold)">LoLdle Answer Finder</text>
   <text x="232" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#a09b8c">LoLdle Cevap Bulucu · Chrome Extension · TR / EN</text>
 </svg>
