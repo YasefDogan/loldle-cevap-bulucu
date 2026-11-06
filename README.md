@@ -32,7 +32,23 @@ A small Chrome extension that reads today's [LoLdle](https://loldle.net) answer 
 
 ## How it works
 
-LoLdle is a Vue app. The extension walks the page's Vue component tree and reads the already-decrypted answer (`todayAnswerDecrypted`) and ability info (`abilityLetter`, `abilityName`). It makes no network requests and collects no data.
+LoLdle does not send today's answer as plain text — it arrives **hashed/encrypted**. But the game has to check your guesses **in the browser**, so the site also ships everything needed to decode it: the key and the decryption logic live in the page's HTML/JavaScript. Anything the browser can decrypt, the user can decrypt too.
+
+So the extension doesn't break any encryption, it just reads what the page has already decoded:
+
+1. **The answer is in the page.** On load, the site uses the key in its own code to decrypt the encrypted answer and stores the result in memory.
+2. **LoLdle is a Vue app.** Every Vue component keeps a reference to itself on its DOM element (`element.__vue__`).
+3. **Walking the tree.** The extension finds the first Vue component in the page, climbs up to the root via `$parent`, then visits every component through `$children`.
+4. **Reading the data.** While walking, it picks up these fields from each component's `$data`:
+   - `todayAnswerDecrypted` → today's champion (already decrypted by the site)
+   - `abilityLetter` → the correct key in Ability mode (P/Q/W/E/R)
+   - `abilityName` → the ability's name
+5. **Bonus question.** It finds the right button among `.letters-container .letter-picker` and highlights it or clicks it for you.
+6. The content script runs in the page's own JavaScript context (`"world": "MAIN"`), which is what makes `__vue__` accessible. Because the site is a single-page app, it re-checks every second as you switch modes.
+
+> In short: **client-side "hiding" isn't security.** If the key is shipped to the browser, the answer can be read. The only real fix would be checking guesses on the server.
+
+It makes no network requests and collects no data — everything happens inside your own browser tab.
 
 ## Files
 
